@@ -1,0 +1,13 @@
+export HOROVOD_CUDA_INCLUDE=/usr/local/cuda/include
+export HOROVOD_CUDA_LIB=/usr/local/cuda/targets/x86_64-linux/lib
+export HOROVOD_NCCL_INCLUDE=/usr/include
+export HOROVOD_NCCL_LIB=/usr/lib/x86_64-linux-gnu
+export HOROVOD_WITHOUT_GLOO=1
+export HOROVOD_WITH_MPI=1
+export HOROVOD_GPU=CUDA
+export HOROVOD_GPU_ALLREDUCE=NCCL
+export HOROVOD_GPU_BROADCAST=NCCL
+export HOROVOD_CPU_OPERATIONS=MPI
+export HOROVOD_WITHOUT_TENSORFLOW=1
+export HOROVOD_WITH_PYTORCH=1
+export HOROVOD_WITHOUT_MXNET=1
