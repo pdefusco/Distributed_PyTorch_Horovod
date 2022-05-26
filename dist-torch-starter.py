@@ -6,7 +6,7 @@ CMD = '''mpirun -np {} -H {} -bind-to none -map-by slot \
 -mca pml ob1 -mca btl ^openib -mca plm_rsh_args '-p 2222 -o StrictHostKeyChecking=no' -mca btl_tcp_if_include eth0 \
 python3 dist-torch-hvd.py'''
 
-workers = cdsw.launch_workers(n=NUM_WORKERS, cpu=1, memory=4, nvidia_gpu=0,
+workers = cdsw.launch_workers(n=NUM_WORKERS, cpu=2, memory=4, nvidia_gpu=1,
                               code="import time; time.sleep(365*24*3600)")
 print('Starting workers ...')
 worker_ids = [worker["id"] for worker in workers]
